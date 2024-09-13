@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f1c40f; /* Puedes cambiar este color si quieres otro */
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    background-color: #f1c40f; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #d4ac0d; /* Un tono más oscuro de amarillo */
+}
+
+#image-container {
+    position: relative;
+    width: 100vw; /* Asegurarse de que el contenedor ocupe todo el ancho de la pantalla */
+    height: 100vh; /* Asegurarse de que el contenedor ocupe toda la altura de la pantalla */
+    overflow: hidden;
+}

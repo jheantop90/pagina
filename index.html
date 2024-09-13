@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Rosas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Para que no seas espectadora bb <3</h1>
+        <div class="buttons">
+            <button class="button" id="thanks">Gracias</button>
+            <button class="button" id="love">Mecánico resuelve bb</button>
+        </div>
+        <!-- Contenedor donde aparecerá la imagen y el texto -->
+        <div id="image-container"></div>
+    </div>
+
+    <script>
+        // Función para mostrar la imagen GIF al hacer clic en el botón "Gracias"
+        document.getElementById('thanks').addEventListener('click', function() {
+            // Seleccionamos el contenedor donde aparecerá la imagen
+            var imageContainer = document.getElementById('image-container');
+            
+            // Limpiamos el contenedor antes de añadir la nueva imagen
+            imageContainer.innerHTML = '';
+            
+            // Creamos y agregamos la imagen
+            var img = document.createElement('img');
+            img.src = 'https://media.tenor.com/1CmSd6GepK4AAAAM/cat-middle-finger.gif'; // URL del GIF
+            img.alt = 'GIF de agradecimiento';
+            img.style.marginTop = '20px'; // Para darle espacio arriba de la imagen
+            img.style.maxWidth = '115%'; // Ajustar el GIF al tamaño de la pantalla, un 15% más grande
+            img.style.height = 'auto'; // Mantener la proporción de la imagen
+            imageContainer.appendChild(img);
+        });
+
+        // Función para limpiar la pantalla y mostrar la nueva imagen al hacer clic en el botón "Mecánico resuelve bb"
+        document.getElementById('love').addEventListener('click', function() {
+            // Seleccionamos el contenedor donde aparece la imagen
+            var imageContainer = document.getElementById('image-container');
+            
+            // Limpiamos el contenedor
+            imageContainer.innerHTML = '';
+            
+            // Creamos y agregamos la nueva imagen
+            var img = document.createElement('img');
+            img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cv4_B7JUtjjOvI20e9ZGMieefrPd0GVJXQ&s'; // URL de la nueva imagen
+            img.alt = 'Nueva imagen';
+            img.style.marginTop = '20px'; // Para darle espacio arriba de la imagen
+            img.style.maxWidth = '115%'; // Ajustar la imagen al tamaño de la pantalla, un 15% más grande
+            img.style.height = 'auto'; // Mantener la proporción de la imagen
+            img.style.position = 'absolute'; // Posicionamiento absoluto para que ocupe toda la pantalla
+            img.style.top = '50%';
+            img.style.left = '50%';
+            img.style.transform = 'translate(-50%, -50%)';
+            imageContainer.appendChild(img);
+
+            // Agregar el texto después de 3 segundos
+            setTimeout(function() {
+                var text = document.createElement('div');
+                text.textContent = 'Te las mereces bb';
+                text.style.color = 'white';
+                text.style.fontSize = '2rem';
+                text.style.fontWeight = 'bold';
+                text.style.textAlign = 'center';
+                text.style.position = 'absolute';
+                text.style.top = '50%';
+                text.style.left = '50%';
+                text.style.transform = 'translate(-50%, -50%)';
+                text.style.zIndex = '10';
+                imageContainer.appendChild(text);
+            }, 3000); // 3000 milisegundos = 3 segundos
+        });
+    </script>
+</body>
+</html>
